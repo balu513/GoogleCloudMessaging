@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String, String> hashMap = new HashMap<>();
+                HashMap<String, String> hashMap = new HashMap();
                 hashMap.put(IConst.PARAM_NAME, name);
                 hashMap.put(IConst.PARAM_EMAIL, email);
                 hashMap.put(IConst.PARAM_PHONE_NUMBER, phNo);
