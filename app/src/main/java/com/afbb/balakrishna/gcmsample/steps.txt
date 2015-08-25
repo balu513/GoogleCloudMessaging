@@ -15,6 +15,10 @@ this id used while register,
 
 *** while registering genarate registrationId it should be unique for each mobile, so, we should save the details in server with maild ,username, phone number along with the registrationId.
 
+**** register the user in our server:
+
+         http://localhost/workspace/GcmApp/register.php?name=balu&&email=balub513@yahoo.co.in&&regId=APA91bG98aelDGaK5-1gU8EvYapHKkpbVKj_HliifCtlQ2AEjCbKHMhLGIuY31ybK8bt...........
+
 *** when any user send messsage to the particular user name based on the user name we can get registrationId, and send the message to that registrationId, it should reach to that particular mobile, while send the
     message to that particular registrationId, brodCast receiver fired.
 
