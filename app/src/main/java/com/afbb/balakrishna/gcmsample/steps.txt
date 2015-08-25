@@ -1,1 +1,36 @@
 http://www.androidhive.info/2012/10/android-push-notifications-using-google-cloud-messaging-gcm-php-and-mysql/
+
+
+***  First we need to create server key and it should used in config.php file as
+define("GOOGLE_API_KEY", "AIzaSyC7f3NlUviNfH0ZAxHLKIzIFVLFabOh1cc");
+
+
+
+**** While create project in google console generate one sender id or product id.
+this id used while register,
+
+                    GoogleCloudMessaging googleCloudMessaging = GoogleCloudMessaging.getInstance(getApplicationContext());
+                    String registrationId = googleCloudMessaging.register(IConst.SENDER_ID);
+
+
+*** while registering genarate registrationId it should be unique for each mobile, so, we should save the details in server with maild ,username, phone number along with the registrationId.
+
+*** when any user send messsage to the particular user name based on the user name we can get registrationId, and send the message to that registrationId, it should reach to that particular mobile, while send the
+    message to that particular registrationId, brodCast receiver fired.
+
+    to send message php file:
+
+    http://localhost/phpws/projects/gcm/send_message.php?message=hello%20BALU%20how%20r%20u&regId=APA91bHgnD9aUUujKfFpRd9EzmfAzT7My2qfvwB057kqcbrwP7nbw29GjKemQS2fKy3cpsE5wNFB84BlH6_lr_Lz5f24Za.......
+
+
+***  after message received to mobile our broadCast receiver "MyGcmBroadCastReciever" fired.
+
+       <receiver
+            android:name=".MyGcmBroadCastReciever"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.afbb.balakrishna.gcmsample" />
+            </intent-filter>
+        </receiver>
