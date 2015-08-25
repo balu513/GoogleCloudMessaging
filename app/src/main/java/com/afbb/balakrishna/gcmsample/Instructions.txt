@@ -6,7 +6,7 @@ define("GOOGLE_API_KEY", "AIzaSyC7f3NlUviNfH0ZAxHLKIzIFVLFabOh1cc");
 
 
 
-**** While create project in google console generate one sender id or product id.
+**** While create project in google console generate one sender id or product id.   ..
 this id used while register,
 
                     GoogleCloudMessaging googleCloudMessaging = GoogleCloudMessaging.getInstance(getApplicationContext());
